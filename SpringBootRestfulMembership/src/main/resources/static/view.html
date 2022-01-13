@@ -12,7 +12,7 @@
 		$(function(){
 			userid = location.search.substring(1).split("=")[1];
 			$.ajax({
-				url : "members/" + userid,
+				url : "http://ec2-13-125-7-248.ap-northeast-2.compute.amazonaws.com/members/" + userid,
 				type : "GET",
 				success : function(data){
 					const member = data.data;
@@ -59,7 +59,7 @@
 					flag = true;
 			}else{
 				$.ajax({
-					url : "members",
+					url : "http://ec2-13-125-7-248.ap-northeast-2.compute.amazonaws.com/members",
 					type : "PUT",
 					data : JSON.stringify({
 						"userid" : userid,
@@ -79,7 +79,7 @@
 		
 		function member_delete(){
 			$.ajax({
-				url : "members/" + userid,
+				url : "http://ec2-13-125-7-248.ap-northeast-2.compute.amazonaws.com/members/" + userid,
 				type : "DELETE",
 				success : function(data){
 					alert(data.code);

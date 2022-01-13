@@ -10,7 +10,7 @@
 		$(function() {
 			$("button[type='button']").bind("click", function(){
 				$.ajax({
-					url : "register",
+					url : "http://ec2-13-125-7-248.ap-northeast-2.compute.amazonaws.com/register",
 					contentType : "application/json;charset=utf-8",
 					type : "POST",
 					data : JSON.stringify({
