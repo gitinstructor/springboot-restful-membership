@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
-@CrossOrigin(origins = {"http://henry-bucket-00.s3-website.ap-northeast-2.amazonaws.com"})
+@CrossOrigin(origins = {"http://henry-bucket-00.s3-website.ap-northeast-2.amazonaws.com", "http://localhost"})
 public class MainController {
 	@Autowired
 	private MemberService memberService;
